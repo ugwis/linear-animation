@@ -54,7 +54,7 @@ body {
 	width:30px;
 	height:30px;
 	display:block;
-	background:url('left.png');
+	background:url('./image/left.png');
 	transition: opacity 0.2s linear 0;
 }
 
@@ -66,7 +66,7 @@ body {
 	width:30px;
 	height:30px;
 	display:block;
-	background:url('right.png');
+	background:url('./image/right.png');
 	transition: opacity 0.2s linear 0; 
 }
 
