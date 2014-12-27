@@ -438,7 +438,7 @@ $(document).ready(function(){
               });
 		modified = false;
     }
-    //$('#animePlay').click(play());
+    $('#animePlay').click(play());
 
 	$('#animeInterval').keydown(function() {
 	    modified = true;
