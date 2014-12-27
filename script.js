@@ -10,6 +10,7 @@ $(document).ready(function(){
 	var isMouseDown = false;
 
 	var data_url="";
+	var gif_path = "http://sandbox.neos-lab.jp/~orn/gif_anime/"
 
 	var modified = false;
 
@@ -388,7 +389,7 @@ $(document).ready(function(){
     $('#animePlay').click(function(){
     	console.log("play()");
     	if(!modified){
-    		$("#playImg").attr('src',data_url);
+    		$("#playImg").attr('src',gif_path + data_url);
     		return 0;
     	}
     	var interval = parseInt($('#animeInterval').val());
@@ -429,12 +430,12 @@ $(document).ready(function(){
                 data : {encrypt : encode64(binary_gif)},
                 timeout:10000,
                 success: function(data) {
-					$("#playImg").attr('src',"http://sandbox.neos-lab.jp/~orn/gif_anime/" + data);
+					$("#playImg").attr('src',gif_path + data);
 					data_url = data;
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                 	console.error(textStatus);
-					$("#playImg").attr('src',data_url);
+					$("#playImg").attr('src',gif_path + data_url);
                 }
               });
 		modified = false;
