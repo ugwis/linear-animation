@@ -438,14 +438,13 @@ $(document).ready(function(){
               });
 		modified = false;
     }
-    $('#animePlay').click(play());
+    //$('#animePlay').click(play());
 
 	$('#animeInterval').keydown(function() {
 	    modified = true;
 	});
 
 	function sign_in_with_twitter(){
-		console.log("sign_in_with_twitter");
 		play();
 		$.cookie("fileName", data_url, { expires: 7 });
 	}
