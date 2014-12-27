@@ -384,7 +384,7 @@ $(document).ready(function(){
 	    }
     });
 
-    function play(){
+    var play = function(){
     	console.log("play()");
     	if(!modified){
     		$("#playImg").attr('src',data_url);
