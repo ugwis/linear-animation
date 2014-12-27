@@ -384,7 +384,8 @@ $(document).ready(function(){
 	    }
     });
 
-    var play = function(){
+
+    $('#animePlay').click(function(){
     	console.log("play()");
     	if(!modified){
     		$("#playImg").attr('src',data_url);
@@ -437,15 +438,13 @@ $(document).ready(function(){
                 }
               });
 		modified = false;
-    }
-    $('#animePlay').click(play());
+    });
 
 	$('#animeInterval').keydown(function() {
 	    modified = true;
 	});
 
 	function sign_in_with_twitter(){
-		play();
 		$.cookie("fileName", data_url, { expires: 7 });
 	}
 
