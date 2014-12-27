@@ -1,6 +1,3 @@
-[submodule "ace"]
-	path = ace
-	url = https://github.com/ajaxorg/ace.git
 [submodule "jsgif"]
 	path = jsgif
 	url = https://github.com/ugwis/jsgif.git

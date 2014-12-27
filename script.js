@@ -384,8 +384,8 @@ $(document).ready(function(){
 	    }
     });
 
-    $('#animePlay').click(play());
     function play(){
+    	console.log("play()");
     	if(!modified){
     		$("#playImg").attr('src',data_url);
     		return 0;
@@ -438,6 +438,7 @@ $(document).ready(function(){
               });
 		modified = false;
     }
+    $('#animePlay').click(play());
 
 	$('#animeInterval').keydown(function() {
 	    modified = true;
