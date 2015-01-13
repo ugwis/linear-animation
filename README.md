@@ -1,5 +1,6 @@
-linear-animation
+線画をアニメーションするお絵かきソフト
 ================
-
-The tool can record the sight of people drawing works and edit it.  
-Linear animation tool will increase the value of your works.
+#### 概要
+お絵かきソフトがリアルタイムで得られる情報（書き順やペンの動く速さなど）を使ってアニメーションを作るというWebアプリです  
+  
+  
