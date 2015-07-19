@@ -10,7 +10,8 @@ $(document).ready(function(){
 	var isMouseDown = false;
 
 	var data_url="";
-	var gif_path = "http://sandbox.neos-lab.jp/~orn/gif_anime/"
+	//var gif_path = "http://sandbox.neos-lab.jp/~orn/gif_anime/"
+	var gif_path = "";
 
 	var modified = false;
 
@@ -423,8 +424,9 @@ $(document).ready(function(){
     	}
 		encoder.finish();
 		var binary_gif = encoder.stream().getData() //notice this is different from the as3gif package!
-		//data_url = 'data:image/gif;base64,'+encode64(binary_gif);
-		$.ajax({
+		data_url = 'data:image/gif;base64,'+encode64(binary_gif);
+		$("#playImg").attr('src',gif_path + data_url);
+		/*$.ajax({
                 url: "http://sandbox.neos-lab.jp/~orn/cgi-bin/create_animation_gif.cgi",
                 type:'POST',
                 data : {encrypt : encode64(binary_gif)},
@@ -437,7 +439,7 @@ $(document).ready(function(){
                 	console.error(textStatus);
 					$("#playImg").attr('src',gif_path + data_url);
                 }
-              });
+              });*/
 		modified = false;
     });
 
